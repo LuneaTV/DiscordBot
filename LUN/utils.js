@@ -98,6 +98,34 @@ module.exports = {
     async sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
     },
+    async updateVal(){
+        let profiles = await LUN.db.valorant.getAllProfile()
+
+        LUN.db.logs(3, "updateVal - Profile (Utils)", `Mise à jour des profils Valorant en cours`)
+
+        for (const profile of profiles) {
+            LUN.db.logs(3, "updateVal - Profile (Utils)", `Mise à jour du profil Valorant : ${profile.global_name}`)
+
+            let acc
+            try {
+                acc = (await LUN.valorant.getProfileByPuuid(profile.gameId)).data
+            } catch (err) {
+                LUN.db.logs(1, "updateVal (Utils)", `Erreur avec le compte : ${profile.gameName}\n${err}`)
+            }
+
+            let ranking
+            try {
+                ranking = await LUN.valorant.getRank(profile.gameId)
+                await LUN.db.valorant.edit(profile.id, acc, ranking)
+            } catch (err) {
+                LUN.db.logs(1, "updateVal - Ranking (Utils)", `Erreur avec le ranking du compte : ${profile.gameName}\n${err}`)
+            }
+        }
+
+        this.updateValRoster()
+
+        LUN.db.logs(3, "updateVal  (Utils)", `Mise à jour des profils Valorant terminée`)
+    },
     async fetchPremierMatches() {
         LUN.db.logs(3, "fetchPremierMatches (Utils)", `Lancement de la rechercher Premier`)
 

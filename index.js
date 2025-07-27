@@ -33,6 +33,7 @@ async function initDB() {
         port: LUN.pass.DB_Port,
         password: LUN.pass.DB_Password,
         database: LUN.pass.DB_Name,
+        queueLimit: 0,
         supportBigNumbers: true,
         bigNumberStrings: true
     });
@@ -88,6 +89,12 @@ fs.readdirSync('events').forEach(file => {
 cron.schedule('0 20,21,22,23 * * *', async () => {
     if (!LUN.dev) {
         await LUN.utils.fetchPremierMatches()
+    }
+});
+
+cron.schedule('0,30 * * * *', async () => {
+    if (!LUN.dev) {
+        await LUN.utils.updateVal();
     }
 });
 
