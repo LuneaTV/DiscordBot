@@ -1,0 +1,73 @@
+{
+  "error": {
+    "unknow": " Une erreur inconnue est survenue, merci de faire un ticket et transmettre ce code erreur : ",
+    "noPerm": " Erreur : Vous n'avez pas la permission de faire cela",
+    "mention": " Vous devez mentionner un membre"
+  },
+  "messages" : {
+    "playbooks" : {
+      "sommaire": "# Sommaire : \n",
+      "attaque": "\n## Attaque :",
+      "defense": "\n## Défense :",
+      "other": "\n## Autres :",
+      "line": "\n%t : %m",
+      "end": "\n\n-# Pour utiliser correctement le playbook, merci de regarder le message épinglé"
+    },
+    "premier": {
+      "title": {
+        "victoire": "victoire",
+        "defaite": "DefAite"
+      }
+    },
+    "roster" : {
+      "val" : {
+        "title": "Hello,\n\nNous te présentons notre roster Valorant !",
+        "rostertitle": "\n\n# Roster %n\n",
+        "line": "\n-# \u200B \n%r %c • %n",
+        "role": " (%r)",
+        "end" : ""
+      }
+    },
+    "report": "<@&1336842004264517662>\n%e a signalé le message %m\n\nRaison : %t"
+  },
+  "commands": {
+    "resetCmds": {
+      "success": "Les commandes ont été réinitialisés !"
+    },
+    "profile": {
+      "unknowProfile": "Le profil n'existe pas",
+      "noSelfProfile": "Vous n'avez pas de profil, vous devez attendre d'être dans la team pour avoir votre profil",
+      "alreadyExist": "Le profil existe déjà",
+      "notFound": "Le compte est introuvable",
+      "add": "Le profil a bien été ajouté !",
+      "modify": "Le profil a bien été modifié !",
+      "remove": "Le profil a bien été retiré !",
+      "roster": "Le roster a bien été modifié !"
+    },
+    "valadm": {
+      "unknowAccount": "Le compte est introuvable",
+      "alreadyExist": "Le profil existe déjà",
+      "alreadyInTryouts": "Ce joueur est déjà en Try-Outs !"
+    },
+    "vocal": {
+      "error": {
+        "not": "Erreur: Vous n'êtes pas dans un vocal",
+        "ban": "Erreur: Vous ne pouvez pas bannir cette personne",
+        "banYourself": "Erreur: Vous ne pouvez pas vous bannir vous-même...",
+        "kick": "Erreur: Vous ne pouvez pas exclure cette personne",
+        "kickYourself": "Erreur: Vous ne pouvez pas vous exclure vous-même...",
+        "notSame": "Vous n'êtes pas dans le même vocal que cette personne"
+      },
+      "successBan": "La personne a bien été ban !",
+      "successKick": "La personne a bien été expulsé !",
+      "successLimit": "La limite a bien été changé !",
+      "successRename": "Le nom a bien été changé !",
+      "vocalName" : {
+        "global": "Salon de %n",
+        "staff": "Staff - %n"
+      },
+      "wrongLimit": "La limite doit être de 0 ou plus !"
+    }
+  },
+  "send": "Le message a été envoyé"
+}
