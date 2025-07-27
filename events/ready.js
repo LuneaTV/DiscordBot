@@ -37,7 +37,7 @@ module.exports = {
             devGuild.channels.cache.get("1388718408010301522").send("Démarrage du bot en production")
         }
 
-        await LUN.utils.registerCommands()
+        //await LUN.utils.registerCommands()
         //await LUN.utils.fetchPremierMatches()
         //await LUN.utils.updateValRoster()
     }
