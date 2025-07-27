@@ -11,7 +11,7 @@
       "defense": "\n## Défense :",
       "other": "\n## Autres :",
       "line": "\n%t : %m",
-      "end": "\n\n-# Pour utiliser correctement le playbook, merci de regarder le message épinglé"
+      "end": "\n\n-# Pour utiliser correctement le playbook, merci de respecter le format suivant : `# Nom de la strat (Défense/Attaque)`"
     },
     "premier": {
       "title": {
