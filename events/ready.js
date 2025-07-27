@@ -28,13 +28,13 @@ module.exports = {
         LUN.guild = guild
         LUN.channels.mod = await guild.channels.cache.get(LUN.config.channel.mod)
         LUN.channels.logs = await guild.channels.cache.get(LUN.config.channel.logs)
-        LUN.channels.errlog = await devGuild.channels.cache.get("1349140185539023030")
+        LUN.channels.errlog = await devGuild.channels.cache.get("1388718408010301522")
 
         console.log("\x1b[32m[Connecté]" + " \x1b[34mDiscord \x1b[0m")
         console.log("\x1b[34m[Interaction]" + `\x1b[0m Chargement de \x1b[34m${interactionNbr}\x1b[0m interactions \x1b[0m`)
 
         if (LUN.dev === false) {
-            devGuild.channels.cache.get("1340648973106417665").send("Démarrage du bot en production")
+            devGuild.channels.cache.get("1388718408010301522").send("Démarrage du bot en production")
         }
 
         await LUN.utils.registerCommands()
