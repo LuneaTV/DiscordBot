@@ -144,9 +144,7 @@ module.exports = {
         },
         async remove(discord) {
             try {
-                return await LUN.sql.execute(`DELETE
-                                              FROM \`users\`
-                                              WHERE id = ?`, [discord])
+                return await LUN.sql.execute(`DELETE FROM \`users\` WHERE id = ?`, [discord])
             } catch (err) {
                 LUN.logger.log("error", err)
                 throw err;
@@ -170,7 +168,7 @@ module.exports = {
         },
         async role_ig(discord, role_ig) {
             try {
-                return await LUN.sql.execute("UPDATE users SET role_ig=? WHERE id=?", [role_ig, discord])
+                return a
             } catch (err) {
                 LUN.logger.log("error", err)
                 throw err;
@@ -184,5 +182,60 @@ module.exports = {
                 throw err;
             }
         }
+    },
+    teams : {
+        async getAll(){
+            try {
+                const [rows] = await LUN.sql.execute("SELECT * FROM teams")
+                return rows
+            } catch (err) {
+                LUN.logger.log("error", err)
+                throw err;
+            }
+        },
+        async getByID(id){
+            try {
+                const [rows] = await LUN.sql.execute("SELECT * FROM teams WHERE id=?", [id])
+                return rows
+            } catch (err) {
+                LUN.logger.log("error", err)
+                throw err;
+            }
+        },
+        async getByName(name){
+            try {
+                const [rows] = await LUN.sql.execute("SELECT * FROM teams WHERE name)=?", [name])
+                return rows
+            } catch (err) {
+                LUN.logger.log("error", err)
+                throw err;
+            }
+        },
+        async update(teamId, gw, gl, mw, ml, rw, rl){
+            try {
+                return await LUN.sql.execute("UPDATE teams SET gw=?,gl=?,mw=?,ml=?,rw=?,rl=? WHERE id=?", [
+                    gw,
+                    gl,
+                    mw,
+                    ml,
+                    rw,
+                    rl,
+                    teamId
+                ])
+            } catch (err) {
+                LUN.logger.log("error", err)
+                throw err;
+            }
+        },
+        async add(name){
+            try {
+                return await LUN.sql.execute("INSERT INTO teams (name) VALUES (?)", [
+                    name
+                ])
+            } catch (err) {
+                LUN.logger.log("error", err)
+                throw err;
+            }
+        },
     }
 }

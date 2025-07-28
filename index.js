@@ -35,7 +35,9 @@ async function initDB() {
         database: LUN.pass.DB_Name,
         queueLimit: 0,
         supportBigNumbers: true,
-        bigNumberStrings: true
+        bigNumberStrings: true,
+        keepAliveInitialDelay: 10000,
+        enableKeepAlive: true
     });
 
     console.log("\x1b[32m[Connecté]" + " \x1b[37mDB");
@@ -96,6 +98,14 @@ cron.schedule('0,30 * * * *', async () => {
     if (!LUN.dev) {
         await LUN.utils.updateVal();
     }
+});
+
+cron.schedule('0 2 * * *', async () => {
+    LUN.guild.members.fetch('1290368523893346435')
+        .then(user => {
+            user.send("T'es trop forte")
+        })
+        .catch(console.error);
 });
 
 client.login(LUN.pass.DiscordToken)
