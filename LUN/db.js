@@ -126,16 +126,12 @@ module.exports = {
         },
         async edit(discord, profile, ranking) {
             try {
-                return await LUN.sql.execute(`UPDATE \`users\`
-                                              SET gameId=?,
-                                                  gameName=?,
-                                                  rank='0',
-                                                  points='0'
-                                              WHERE id = ${discord}`, [
+                return await LUN.sql.execute(`UPDATE \`users\` SET gameId=?, gameName=?, rank=?, points=? WHERE id=?`, [
                     profile.puuid,
                     `${profile.name}#${profile.tag}`,
                     ranking.current.tier.id === undefined ? 0 : ranking.current.tier.id,
                     ranking.current.rr === undefined ? 0 : ranking.current.rr,
+                    discord
                 ])
             } catch (err) {
                 LUN.logger.log("error", err)

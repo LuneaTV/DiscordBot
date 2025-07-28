@@ -40,6 +40,6 @@ module.exports = {
         //await LUN.utils.registerCommands()
         //await LUN.utils.fetchPremierMatches()
         //await LUN.utils.updateValRoster()
-        //await LUN.utils.updateVal()
+        await LUN.utils.updateVal()
     }
 }
