@@ -19,9 +19,25 @@
         "defaite": "DefAite"
       }
     },
+    "matchAnnounceMessage": {
+      "normal" : {
+        "victoire": "%p\n\nLe roster %r l'emporte face à %e sur la map %m ! ",
+        "defaite": "%p \n\nLe roster %r s'incline malheureusement face à %e sur la map %m ! "
+      },
+      "tournament" : {
+        "victoire": "%p\n\nLe roster %r l'emporte face à %e pendant %t sur la map %m ! ",
+        "defaite": "%p \n\nLe roster %r s'incline malheureusement face à %e pendant %t sur la map %m ! "
+      }
+    },
+    "premier": {
+      "title": {
+        "victoire": "victoire",
+        "defaite": "DefAite"
+      }
+    },
     "roster" : {
       "val" : {
-        "title": "Hello,\n\nNous te présentons notre roster Valorant !",
+        "title": "Hello,\n\nNous te présentons nos rosters Valorant !",
         "rostertitle": "\n\n# Roster %n\n",
         "line": "\n-# \u200B \n%r %c • %n",
         "role": " (%r)",

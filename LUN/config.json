@@ -45,10 +45,20 @@
         "matchAnnounce": "1398853526683127918",
         "val_roster": "1398853321338650634",
         "playbooks" : [
-            "1398758729721057451"
+            "1398758729721057451",
+            "1399513420155322479"
         ]
     },
-    "premier": "",
+    "premier": {
+        "noxelia": {
+            "teamId": "SilentRoseRiva/SRR",
+            "name": "Noxelia"
+        },
+        "masculin": {
+            "teamId": "",
+            "name": "Masculin"
+        }
+    },
     "allowList": {
         "sendCustom": [
             "1398758323129679892",

@@ -48,7 +48,16 @@
             "1398853918276059268"
         ]
     },
-    "premier": "SilentRoseRiva/SRR",
+    "premier": {
+        "noxelia": {
+            "teamId": "SilentRoseRiva/SRR",
+            "name": "Noxelia"
+        },
+        "masculin": {
+            "teamId": "",
+            "name": "Masculin"
+        }
+    },
     "allowList": {
         "sendCustom": [
             "874807398408261712",

@@ -164,7 +164,7 @@ module.exports = {
         },
         async role_ig(discord, role_ig) {
             try {
-                return a
+                return await LUN.sql.execute("UPDATE users SET role_ig=? WHERE id=?", [role_ig, discord])
             } catch (err) {
                 LUN.logger.log("error", err)
                 throw err;
