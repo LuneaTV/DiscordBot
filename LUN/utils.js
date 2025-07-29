@@ -145,7 +145,7 @@ module.exports = {
                 }
 
                 for (const matchId of allMatchId) {
-                    if (await LUN.db.valorant.premier.matchExists(matchId)) continue;
+                    //if (await LUN.db.valorant.premier.matchExists(matchId)) continue;
 
                     const matchDetails = await LUN.valorant.getMatch(matchId)
                     const won = (premierMatch.points_after - premierMatch.points_before) === 100
@@ -271,7 +271,7 @@ module.exports = {
                         const channel = await LUN.guild.channels.cache.get(LUN.config.channel.matchAnnounce)
 
                         channel.send({
-                            content: (won ? LUN.lang.messages.matchAnnounceMessage.normal.victoire : LUN.lang.messages.matchAnnounceMessage.normal.defaite).replace("%p", `<@&${LUN.config.roles.resultMatch}>`).replace("%r", roster.name).replace("%e", enemyTeam.premier_roster.name).replace("%m", matchDetails.metadata.map.name) + LUN.lang.emotes.logo,
+                            content: (won ? LUN.lang.messages.matchAnnounceMessage.normal.victoire : LUN.lang.messages.matchAnnounceMessage.normal.defaite).replace("%p", `<@&${LUN.config.roles.resultMatch}>`).replace("%r", roster.name).replace("%e", enemyTeam.premier_roster.name).replace("%m", matchDetails.metadata.map.name) + LUN.config.emotes.logo,
                             files: [file],
                             components: [row]
                         })

@@ -42,7 +42,7 @@
         "tournamentCategory": "1365032406045692036",
         "logs": "1365032458088616068",
         "mod": "1365032458088616068",
-        "matchAnnounce": "1398101244328808518",
+        "matchAnnounce": "1380487100222144614",
         "val_roster": "1380487100222144614",
         "playbooks" : [
             "1398853918276059268"
@@ -53,7 +53,7 @@
     },
     "premier": {
         "noxelia": {
-            "teamId": "",
+            "teamId": "SilentRoseRiva/SRR",
             "name": "Noxelia"
         },
         "masculin": {
