@@ -53,8 +53,8 @@ module.exports = {
                         .setDescription('Donnez le nom du roster')
                         .setRequired(true)
                         .addChoices(
-                            { name: 'Noxelia', value: 'Noxelia' },
-                            { name: 'Masculin', value: 'Masculin' },
+                            { name: 'Noxelia (Féminin)', value: 'Noxelia' },
+                            { name: 'Noxelios (Masculin)', value: 'Noxelios' },
                         )))
         .addSubcommand(subcommand =>
             subcommand
@@ -137,8 +137,8 @@ module.exports = {
                         .setDescription('Donnez le nom du roster')
                         .setRequired(true)
                         .addChoices(
-                            { name: 'Noxelia', value: 'Noxelia' },
-                            { name: 'Masculin', value: 'Masculin' },
+                            { name: 'Noxelia (Féminin)', value: 'Noxelia' },
+                            { name: 'Noxelios (Masculin)', value: 'Noxelios' },
                         )))
         .addSubcommand(subcommand =>
             subcommand
