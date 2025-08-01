@@ -1,6 +1,3 @@
-const fs = require('fs');
-const https = require('https');
-
 module.exports = {
     type: "guildMemberAdd",
     once: false,

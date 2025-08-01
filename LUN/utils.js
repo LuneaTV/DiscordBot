@@ -145,7 +145,7 @@ module.exports = {
                 }
 
                 for (const matchId of allMatchId) {
-                    //if (await LUN.db.valorant.premier.matchExists(matchId)) continue;
+                    if (await LUN.db.valorant.premier.matchExists(matchId)) continue;
 
                     const matchDetails = await LUN.valorant.getMatch(matchId)
                     const won = (premierMatch.points_after - premierMatch.points_before) === 100
