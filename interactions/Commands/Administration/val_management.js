@@ -269,7 +269,7 @@ module.exports = {
                 break;
         }
 
-        await LUN.db.valorant.create(discord.value, discord.user.avatar, name, profile, ranking, role_ig, role, interaction.options._hoistedOptions[5].value)
+        await LUN.db.valorant.create(discord.value, discord.user.avatar, name, interaction.options._hoistedOptions[6].value, profile, ranking, role_ig, role, interaction.options._hoistedOptions[5].value)
 
         await interaction.editReply({content: LUN.config.emotes.success + endMessage, ephemeral: true})
     },
