@@ -97,7 +97,7 @@ module.exports = {
             }
         },
         async create(discord, avatar, name, profile, ranking, role_ig, role) {
-            const [rows] = await LUN.sql.execute("INSERT INTO \`users\` (id,avatar,global_name,gameId,gameName,rank,points,role_ig,role,locale,mfa_enabled) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", [
+            const [rows] = await LUN.sql.execute("INSERT INTO \`users\` (id,avatar,global_name,gameId,gameName,rank,points,role_ig,role,locale,mfa_enabled) VALUES (?,?,?,?,?,?,?,?,?,?,?)", [
                 discord,
                 avatar,
                 name,
