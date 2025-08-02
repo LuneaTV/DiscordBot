@@ -71,7 +71,7 @@ module.exports = {
         },
         async getProfileForRoster() {
             try {
-                const [rows] = await LUN.sql.execute("SELECT * FROM users WHERE game='valorant' ORDER BY roster, role, rank DESC;")
+                const [rows] = await LUN.sql.execute("SELECT * FROM users WHERE roster != '' ORDER BY roster, role, rank DESC;")
                 return rows
             } catch (err) {
                 LUN.logger.log("error", err)
@@ -97,11 +97,10 @@ module.exports = {
             }
         },
         async create(discord, avatar, name, profile, ranking, role_ig, role) {
-            const [rows] = await LUN.sql.execute("INSERT INTO \`users\` (id,avatar,global_name,game,gameId,gameName,rank,points,role_ig,role,locale,mfa_enabled) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", [
+            const [rows] = await LUN.sql.execute("INSERT INTO \`users\` (id,avatar,global_name,gameId,gameName,rank,points,role_ig,role,locale,mfa_enabled) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)", [
                 discord,
                 avatar,
                 name,
-                "valorant",
                 profile.puuid,
                 `${profile.name}#${profile.tag}`,
                 ranking.current.tier.id === undefined ? 0 : ranking.current.tier.id,
