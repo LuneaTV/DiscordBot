@@ -53,13 +53,13 @@
         "resultMatch": "1399530474078208041"
     },
     "premier": {
-        "noxelia": {
+        "asterides": {
             "teamId": "",
-            "name": "Noxelia"
+            "name": "Astérides"
         },
-        "noxelios": {
+        "astreos": {
             "teamId": "",
-            "name": "Noxelios"
+            "name": "Astréos"
         }
     },
     "allowList": {
